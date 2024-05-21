@@ -44,6 +44,15 @@ public class TTT_Canvas extends JPanel implements MouseListener, MouseMotionList
                 g2D.drawString(this.filled[tile] + "", x + 48, y + 100);
             } 
         }
+        
+        for (int i = 0; i < 9; i++) {
+            if (this.filled[i] == 0) {
+                break;
+            }
+            if (i == 8) {
+                g2D.drawString("Draw",  130, 500);
+            }
+        }
 
         //checks for a winner
         for (int i = 0; i < 3; ++i) {
